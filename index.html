@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VBBS Tết 2027 — Concept Deck · Dê Vàng Gõ Cửa</title>
+<style>
+  :root{
+    --ink:#12100e; --ink2:#1b1815; --paper:#f6efe3; --muted:#a89c8b;
+    --red:#8f2f24; --gold:#c9a227; --jade:#3f6f63; --indigo:#2c3b57;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--paper);
+       font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  a{color:var(--gold)}
+  h1,h2,h3{font-weight:600;letter-spacing:-.02em;margin:0}
+  .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .serif{font-family:Georgia,"Times New Roman",serif}
+  header.hero{padding:88px 0 56px;border-bottom:1px solid #2a251f;
+    background:radial-gradient(1200px 520px at 12% -10%,rgba(143,47,36,.35),transparent 60%),
+               radial-gradient(900px 460px at 92% 0%,rgba(201,162,39,.16),transparent 60%)}
+  .hero h1{font-size:clamp(38px,6.2vw,74px);line-height:1.02}
+  .hero .sub{margin-top:18px;font-size:clamp(16px,2vw,21px);color:#d9cfbe;max-width:640px}
+  .metagrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#2a251f;margin-top:44px}
+  .metagrid > div{background:var(--ink);padding:18px 16px}
+  .metagrid b{display:block;font-size:22px;color:var(--paper)}
+  .metagrid span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  section{padding:64px 0;border-bottom:1px solid #241f1a}
+  h2{font-size:clamp(24px,3vw,34px);margin-bottom:10px}
+  .lead{color:#c9bfae;max-width:760px;margin:0 0 30px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .card{background:var(--ink2);border:1px solid #2b2620;border-radius:14px;padding:20px}
+  .card h4{margin:0 0 8px;font-size:15px;letter-spacing:.02em}
+  .card p{margin:0;color:#b9ae9d;font-size:14px;line-height:1.55}
+  .stat{font-size:34px;color:var(--gold);line-height:1}
+  .concept{margin:56px 0 0}
+  .concept-head{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:6px}
+  .num{font-family:Georgia,serif;font-size:44px;color:var(--gold);line-height:.8}
+  .concept h3{font-size:clamp(22px,2.6vw,30px)}
+  .tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+       border:1px solid #3a332b;border-radius:999px;padding:5px 11px}
+  figure{margin:22px 0 0}
+  figure img{width:100%;display:block;border-radius:12px;border:1px solid #2b2620}
+  figcaption{font-size:12px;color:#8d8272;margin-top:9px}
+  .specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2b2620;
+         border-radius:12px;overflow:hidden;margin-top:18px}
+  .specs div{background:var(--ink2);padding:14px 16px}
+  .specs dt{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .specs dd{margin:0;font-size:14px;color:#ded4c3;line-height:1.5}
+  ol.shots{margin:14px 0 0;padding-left:20px;color:#c9bfae;font-size:14.5px;line-height:1.8}
+  .clipbar{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+  .clipbar div{border-left:2px solid var(--gold);padding:4px 0 4px 12px;font-size:13.5px;color:#c9bfae}
+  .clipbar b{display:block;color:var(--paper);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px}
+  .palette{display:flex;gap:8px;margin:16px 0 30px;flex-wrap:wrap}
+  .sw{width:70px;height:44px;border-radius:7px;border:1px solid #00000055;position:relative}
+  .sw span{position:absolute;bottom:-18px;left:0;font-size:10px;color:#8d8272}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+  th,td{text-align:left;padding:11px 10px;border-bottom:1px solid #2b2620;color:#cec4b3}
+  th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  td b{color:var(--paper)}
+  .gantt{margin-top:18px}
+  .bar{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:12px;margin-bottom:9px;font-size:13px}
+  .track{position:relative;height:24px;background:#221d18;border-radius:5px;overflow:hidden}
+  .fill{position:absolute;top:0;bottom:0;border-radius:5px}
+  .axis{display:grid;grid-template-columns:150px 1fr;gap:12px;font-size:10.5px;color:#7d7365;
+        letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+  .axis .wk{display:flex;justify-content:space-between}
+  video{width:100%;max-width:400px;border-radius:14px;border:1px solid #2b2620;display:block}
+  .note{font-size:12.5px;color:#8d8272;line-height:1.65;margin-top:16px}
+  .refs a{display:block;padding:11px 0;border-bottom:1px solid #241f1a;font-size:14px;text-decoration:none}
+  .refs a span{color:#8d8272;display:block;font-size:12.5px;margin-top:3px}
+  .callout{border:1px solid #4a3f2c;background:#1e1a14;border-radius:12px;padding:20px 22px;margin-top:22px;color:#c9bfae;line-height:1.6}
+  .callout b{color:var(--gold)}
+  footer{padding:44px 0 70px;color:#7d7365;font-size:12.5px;line-height:1.8}
+  @media (max-width:820px){
+    .metagrid,.grid2,.grid4,.specs{grid-template-columns:1fr}
+    .clipbar{grid-template-columns:1fr}
+    section{padding:44px 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">VBBS · Concept deck v1 · 21/11/2026</div>
+  <h1 class="serif">Tết 2027<br>Dê Vàng Gõ Cửa</h1>
+  <p class="sub">Hệ concept ảnh &amp; clip Tết cho <b>~500 bé · 4 cơ sở</b> — mỗi bé một bộ ảnh riêng và một clip riêng. Toàn bộ ảnh dưới đây là <b>render concept bằng AI</b> để duyệt hướng nhìn, không phải ảnh chụp thật.</p>
+  <div class="metagrid">
+    <div><b>06/02/2027</b><span>Mùng 1 Tết Đinh Mùi</span></div>
+    <div><b>77 ngày</b><span>Từ hôm nay tới Tết</span></div>
+    <div><b>31/01/2027</b><span>Hạn chót giao ảnh</span></div>
+    <div><b>500 bé</b><span>12 ảnh + 1 clip / bé</span></div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="kicker">01 · Nghiên cứu</div>
+  <h2>Xu hướng đang thắng không phải “Tết đỏ rực”</h2>
+  <p class="lead">Dữ liệu đơn nhiếp ảnh trẻ em Trung Quốc 2026 và báo cáo xu hướng Tết của Xiaohongshu chỉ về cùng một hướng: Tết trầm — thủ công — có câu chuyện — và có chuyển động.</p>
+  <div class="grid4">
+    <div class="card"><div class="stat">45%</div><h4 style="margin-top:12px">Đời thường / ghi thật</h4><p>Nhóm phong cách chiếm nhiều đơn nhất: trẻ không diễn, ánh sáng mềm, không hô “1-2-3 cười”.</p></div>
+    <div class="card"><div class="stat">20%</div><h4 style="margin-top:12px">Tân Trung thức</h4><p>Một màu chủ đạo, chi tiết thủ công, rất ít đạo cụ. Bùng nổ vì tránh được trang điểm nặng và dáng mẫu cứng.</p></div>
+    <div class="card"><div class="stat">9,3 tỷ</div><h4 style="margin-top:12px">Lượt hiển thị</h4><p>Chủ đề “tôi là người tạo ra Tết” trên Xiaohongshu — người trẻ tự làm đồ Tết thay vì mua đồ trang trí công nghiệp.</p></div>
+    <div class="card"><div class="stat">1,2–1,9tr</div><h4 style="margin-top:12px">Giá một gói Tết</h4><p>Giá thị trường TPHCM cho 1 concept + ảnh chỉnh sửa. Đây là giá trị cảm nhận mà phụ huynh nhận miễn phí.</p></div>
+  </div>
+  <div class="callout"><b>Kết luận brief:</b> không làm “Tết càng rực càng tốt”. Làm Tết trầm, có đồ thủ công do chính các bé tạo ra (Reggio Atelier), có di sản Việt (tranh Đông Hồ, ông đồ), và bắt buộc phải có chuyển động — vì thứ được chia sẻ là clip, không phải ảnh.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">02 · Hệ concept</div>
+  <h2>Năm phòng, một ngôn ngữ màu</h2>
+  <p class="lead">Không phải năm bộ sưu tập rời. Năm set dùng chung một bảng màu, một LUT, một lens, một cách đặt tên file — để hậu kỳ 6.000 ảnh vẫn chạy như dây chuyền.</p>
+  <div class="palette">
+    <div class="sw" style="background:#8f2f24"><span>Brick red</span></div>
+    <div class="sw" style="background:#f6efe3"><span>Oat cream</span></div>
+    <div class="sw" style="background:#2c3b57"><span>Indigo</span></div>
+    <div class="sw" style="background:#c9a227"><span>Muted gold</span></div>
+    <div class="sw" style="background:#3f6f63"><span>Jade</span></div>
+    <div class="sw" style="background:#7a4a2b"><span>Terracotta</span></div>
+  </div>
+
+  <div class="concept">
+    <div class="concept-head"><div class="num">01</div><h3 class="serif">Tết Trong Tranh</h3><span class="tag">Chủ lực · Green–Purple</span><span class="tag">Độc bản</span></div>
+    <p class="lead" style="margin-bottom:0">Bé không đứng cạnh tranh Tết — bé <i>ở trong</i> tranh. Khung gỗ lớn + phông Đông Hồ in 3 lớp. Đây là thứ không studio thương mại nào có, và là cảnh “bước ra khỏi tranh” rất dễ lan.</p>
+    <figure><img src="Assets/tet/01-tet-trong-tranh.png" alt="Concept 1 — Tết Trong Tranh, set rỗng"><figcaption>Render concept: set rỗng, khung gỗ 2,4 × 1,6 m + phông Đông Hồ 3 lớp + lá chuối + cành đào. Dùng để duyệt vật liệu và ánh sáng, không phải ảnh cuối.</figcaption></figure>
+    <div class="specs">
+      <div><dt>Set</dt><dd>Khung gỗ 2,4×1,6 m; phông canvas in 3 lớp (giấy dó → nét mực → lá trước); thúng mây, stool gỗ thấp.</dd></div>
+      <div><dt>Ánh sáng</dt><dd>1 softbox lớn 45° trước trái, 1 fill; nền tối hơn mặt 1,5 stop để nét mực nổi.</dd></div>
+      <div><dt>Trang phục</dt><dd>Thượng y / áo gấm 1 màu trầm: đỏ gạch, nãi hoàng, đại lam.</dd></div>
+      <div><dt>Đạo cụ</dt><dd>Nghiên mực, bút lông, giấy dó, ấn triện, 1 bao lì xì.</dd></div>
+      <div><dt>Thời gian / bé</dt><dd>18 phút (ảnh 12′ + clip 4′ + chuẩn bị 2′).</dd></div>
+      <div><dt>Chi phí dựng</dt><dd>6–9 triệu/bộ, dùng lại nhiều năm.</dd></div>
+    </div>
+    <div class="grid2" style="margin-top:22px">
+      <div><h4>4 khung ảnh bắt buộc</h4>
+        <ol class="shots">
+          <li>Toàn khung, bé đứng giữa tranh — thấy được tỷ lệ người và tranh.</li>
+          <li>Bàn tay bé chạm nét mực trên giấy dó.</li>
+          <li>Bé quay ra ngoài khung, cười — phá vỡ “trong tranh”.</li>
+          <li>Chi tiết: mực loang + bao lì xì + tay bé.</li>
+        </ol></div>
+      <div><h4>Clip 20 giây · 3 nhịp</h4>
+        <div class="clipbar" style="grid-template-columns:1fr">
+          <div><b>Nhịp 1 · 0–6s</b>Camera lia ngang bức tranh trống. Không có ai.</div>
+          <div><b>Nhịp 2 · 6–14s</b>Cắt cảnh: bé đã ở trong tranh, quay lại nhìn ống kính, tay cầm bao lì xì.</div>
+          <div><b>Nhịp 3 · 14–20s</b>Câu chúc Tết của chính bé + card tên bé · lớp · VBBS 2027.</div>
+        </div></div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <div class="concept-head"><div class="num">02</div><h3 class="serif">Chợ Tết Nhí</h3><span class="tag">Yellow–Blue</span><span class="tag">Hành động</span></div>
+    <p class="lead" style="margin-bottom:0">Sạp chợ thật ở góc sân trường. Bé bán hàng, cô giáo là khách. Ảnh đẹp nhất luôn là ảnh thứ 40 — vì bé đang làm việc, không đang chụp hình.</p>
+    <figure><img src="Assets/tet/02-cho-tet-nhi.png" alt="Concept 2 — Chợ Tết Nhí"><figcaption>Render concept: sạp gỗ 1,2 m + 4 thúng mây + bánh chưng + cân đồng hồ + câu đối.</figcaption></figure>
+    <div class="specs">
+      <div><dt>Set</dt><dd>Sạp gỗ thấp 1,2 m, 4 thúng mây, phông vải nhuộm trầm phía sau.</dd></div>
+      <div><dt>Ánh sáng</dt><dd>1 đèn lớn 4200K + reflector trắng; tông ấm, không gắt.</dd></div>
+      <div><dt>Đạo cụ</dt><dd>Bánh chưng thật bọc lá, xôi gấc, dưa hấu nhỏ, cân đồng hồ, tiền xu, câu đối viết tay.</dd></div>
+      <div><dt>Hành động gài sẵn</dt><dd>Mời khách · đếm tiền xu · bưng thúng hoa · bóc bánh chưng.</dd></div>
+      <div><dt>Thời gian / bé</dt><dd>25 phút.</dd></div>
+      <div><dt>Chi phí dựng</dt><dd>8–12 triệu (bán lại được sau Tết).</dd></div>
+    </div>
+    <ol class="shots">
+      <li>Toàn sạp, bé đứng sau quầy.</li>
+      <li>Bé đưa bao lì xì cho “khách” (cô giáo đóng vai, không đứng ngoài cười).</li>
+      <li>Close: tay bé bóc bánh chưng, lạt và lá dong.</li>
+      <li>Bé ngồi trong thúng hoa — khung dễ thương nhất bộ.</li>
+    </ol>
+    <div class="clipbar">
+      <div><b>0–6s</b>Bé hô “Chợ Tết mở hàng!” — tiếng ồn chợ (foley) vào.</div>
+      <div><b>6–14s</b>Bé mời khách, đưa lì xì, cười.</div>
+      <div><b>14–20s</b>Câu chúc + card tên.</div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <div class="concept-head"><div class="num">03</div><h3 class="serif">Bếp Bánh Chưng</h3><span class="tag">Purple</span><span class="tag">Low-key</span></div>
+    <p class="lead" style="margin-bottom:0">Bộ ảnh cần nhịp. Sau hai set nền sáng, đây là set tối duy nhất: bếp, nồi gang, khói, lửa. Trẻ con ngồi canh nồi sẽ buồn ngủ — và đó là ảnh vàng.</p>
+    <figure><img src="Assets/tet/03-bep-banh-chung.png" alt="Concept 3 — Bếp Bánh Chưng"><figcaption>Render concept: nồi gang + lá dong + lạt + khói sân khấu, đèn xiên 45° từ sau.</figcaption></figure>
+    <div class="specs">
+      <div><dt>Set</dt><dd>Bếp gạch thấp, nồi gang 40 cm, lá dong tươi, lạt, rổ nếp.</dd></div>
+      <div><dt>Ánh sáng</dt><dd>Đèn ấm xiên 45° từ phía sau + haze; nền tối, highlight hổ phách.</dd></div>
+      <div><dt>Trang phục</dt><dd>Áo bà ba / đồ bộ vải thô màu trầm, chân đất (sàn sạch).</dd></div>
+      <div><dt>An toàn</dt><dd>Không lửa thật. Khói sân khấu cách mặt bé ≥1,5 m + quạt hút. Kiểm tra dị nguyên nếp/đậu.</dd></div>
+      <div><dt>Thời gian / bé</dt><dd>15 phút.</dd></div>
+      <div><dt>Chi phí dựng</dt><dd>4–6 triệu.</dd></div>
+    </div>
+    <ol class="shots">
+      <li>Tay bé + lá dong + lạt (macro).</li>
+      <li>Mặt bé qua làn khói.</li>
+      <li>Bé ngồi cạnh nồi, ôm gối — khung dễ thương nhất.</li>
+      <li>Toàn cảnh bếp, thấy nồi và ánh lửa giả.</li>
+    </ol>
+    <div class="clipbar">
+      <div><b>0–6s</b>Tiếng lửa + hơi nước; camera tiến chậm vào nồi.</div>
+      <div><b>6–14s</b>Bé kể “con đang canh nồi bánh chưng”.</div>
+      <div><b>14–20s</b>Câu chúc + card tên.</div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <div class="concept-head"><div class="num">04</div><h3 class="serif">Tết Nhẹ</h3><span class="tag">Red–Orange</span><span class="tag">Volume</span></div>
+    <p class="lead" style="margin-bottom:0">Đúng nguyên tắc Tân Trung thức: một phông, một cành, một màu. Đây là set phụ huynh được vào khung — ảnh trở thành ảnh gia đình, giá trị cảm nhận gấp đôi, chi phí bằng không.</p>
+    <figure><img src="Assets/tet/04-tet-nhe.png" alt="Concept 4 — Tết Nhẹ"><figcaption>Render concept: phông giấy mễ bạch + 1 cành đào + bình gốm. Không gì khác.</figcaption></figure>
+    <div class="specs">
+      <div><dt>Set</dt><dd>Phông giấy 2,7 m + bình gốm + cành đào thật (thay nước hằng ngày).</dd></div>
+      <div><dt>Ánh sáng</dt><dd>1 softbox 5 feet hoặc cửa sổ lớn; f/2.0, 50 mm; hậu cảnh mờ.</dd></div>
+      <div><dt>Trang phục</dt><dd>1 màu, chất liệu thô (linen/lụa): đỏ gạch, xanh ngọc, nãi hoàng.</dd></div>
+      <div><dt>Đặc biệt</dt><dd>Bố/mẹ vào khung cùng bé — bắt buộc với khối RED/ORANGE.</dd></div>
+      <div><dt>Thời gian / bé</dt><dd>35–45 phút (có phụ huynh, có nghỉ).</dd></div>
+      <div><dt>Chi phí dựng</dt><dd>~3 triệu/cơ sở.</dd></div>
+    </div>
+    <ol class="shots">
+      <li>Chân dung nửa người, mắt nhìn ống kính.</li>
+      <li>Tay bé với cành đào.</li>
+      <li>Bé nằm sấp trên nền, mẹ ngồi cạnh (khung gia đình).</li>
+      <li>Close: mắt, mi, bàn tay.</li>
+    </ol>
+    <div class="clipbar">
+      <div><b>0–5s</b>Bé nhìn ống kính, cười (bé &lt;24 tháng: bập bẹ).</div>
+      <div><b>5–12s</b>Câu chúc do bố mẹ điền vào form, hiện dạng phụ đề.</div>
+      <div><b>12–15s</b>Card tên + giọng bố mẹ (nếu có).</div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <div class="concept-head"><div class="num">05</div><h3 class="serif">Dê Vàng</h3><span class="tag">Station chung</span><span class="tag">Không tính vào bộ</span></div>
+    <p class="lead" style="margin-bottom:0">Linh vật 2027 — Dê vàng, sừng ngọc xanh, đúng ngôn ngữ thị trường đang bán. Chỉ dùng cho ảnh lớp, ảnh cô–trò và khung kết clip toàn trường. Không làm concept chính: 500 ảnh giống nhau sẽ nhàm.</p>
+    <figure><img src="Assets/tet/05-de-vang.png" alt="Concept 5 — Dê Vàng"><figcaption>Render concept: tượng dê vàng 1,2 m trên bệ cỏ khô + confetti vàng.</figcaption></figure>
+    <div class="specs">
+      <div><dt>Chất liệu</dt><dd>Xốp phủ sơn mờ hoặc bông len; sừng sơn xanh ngọc.</dd></div>
+      <div><dt>Dùng cho</dt><dd>Ảnh lớp · ảnh cô–trò · khung kết phim LED.</dd></div>
+      <div><dt>Vị trí</dt><dd>Sảnh chính, hoạt động như photobooth cho phụ huynh ngày hội chợ.</dd></div>
+      <div><dt>Chi phí</dt><dd>Thuê 3–5 triệu hoặc tự làm ~2 triệu.</dd></div>
+      <div><dt>Thời gian / bé</dt><dd>0 — chụp theo lớp, không tính vào slot cá nhân.</dd></div>
+      <div><dt>Rủi ro</dt><dd>Xưởng kín trước Tết 3 tuần nếu đặt muộn.</dd></div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">03 · Clip mẫu</div>
+  <h2>Một clip mẫu đã render</h2>
+  <p class="lead">Clip mẫu dựng từ chính các render ở trên, đúng khuôn 20 giây mà 500 bé sẽ được dựng theo: 3 nhịp + card tên. Mỗi bé chỉ thay cảnh quay và câu chúc — phần còn lại là template.</p>
+  <video src="Assets/tet/clip-mau-tet-2027.mp4" controls playsinline poster="Assets/tet/01-tet-trong-tranh.png"></video>
+  <p class="note">Khuôn clip: 9:16 dọc cho Zalo/Facebook của ba mẹ · xuất thêm bản 16:9 cho màn hình LED ngày hội chợ. Nhạc: bed không bản quyền, dựng riêng cho VBBS — không dùng nhạc Tết phổ thông để tránh vấn đề bản quyền khi phụ huynh đăng lại.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">04 · Sản xuất</div>
+  <h2>Bốn trạm, một lượt, không quay lại</h2>
+  <div class="grid4">
+    <div class="card"><h4>A · Chuẩn bị</h4><p>2 cô giáo + 1 phụ huynh. 3–4 phút. Chải tóc, thay áo, gắn số bé. Không mỹ phẩm cho bé dưới 3 tuổi.</p></div>
+    <div class="card"><h4>B · Ảnh</h4><p>1 photographer + 1 assistant. 7–8 phút. Đúng 12 khung theo shot list — không sáng tạo trong giờ chụp.</p></div>
+    <div class="card"><h4>C · Clip</h4><p>1 videographer + 1 cô giáo. 3–4 phút. 2 take tối đa, 9:16, máy cố định, mic định hướng.</p></div>
+    <div class="card"><h4>D · Ra</h4><p>1 điều phối. 1 phút. Gửi ảnh behind-the-scene qua Zalo ngay trong buổi, đặt tên file tại chỗ.</p></div>
+  </div>
+
+  <h3 class="serif" style="margin-top:40px;font-size:20px">Năng lực &amp; lịch</h3>
+  <table>
+    <tr><th>Khối</th><th>Số bé</th><th>Phút/bé</th><th>Giờ studio</th><th>Khung giờ chụp</th></tr>
+    <tr><td>RED 6–12m</td><td>40</td><td>45</td><td>30,0</td><td>Sáng 9:00–10:30</td></tr>
+    <tr><td>ORANGE 13–24m</td><td>70</td><td>35</td><td>40,8</td><td>Sáng 9:00–10:30</td></tr>
+    <tr><td>YELLOW 25–36m</td><td>90</td><td>25</td><td>37,5</td><td>Sáng 9:00–10:30</td></tr>
+    <tr><td>GREEN 3–4y</td><td>110</td><td>18</td><td>33,0</td><td>Chiều 14:30–16:00</td></tr>
+    <tr><td>BLUE 4–5y</td><td>100</td><td>15</td><td>25,0</td><td>Chiều 14:30–16:00</td></tr>
+    <tr><td>PURPLE 5–6y</td><td>90</td><td>15</td><td>22,5</td><td>Chiều 14:30–16:00</td></tr>
+    <tr><td><b>Tổng</b></td><td><b>500</b></td><td>—</td><td><b>189 giờ</b></td><td>3 pod × 14 ngày + 4 ngày setup</td></tr>
+  </table>
+
+  <div class="gantt">
+    <div class="axis"><div></div><div class="wk"><span>23/11</span><span>14/12</span><span>04/01</span><span>18/01</span><span>01/02</span><span>06/02</span></div></div>
+    <div class="bar"><span>Chốt + đặt may</span><div class="track"><div class="fill" style="left:0%;width:9%;background:#8f2f24"></div></div></div>
+    <div class="bar"><span>Dựng set + pilot</span><div class="track"><div class="fill" style="left:9%;width:18%;background:#7a4a2b"></div></div></div>
+    <div class="bar"><span>Sản xuất 4 cơ sở</span><div class="track"><div class="fill" style="left:27%;width:45%;background:#c9a227"></div></div></div>
+    <div class="bar"><span>Hậu kỳ + in ấn</span><div class="track"><div class="fill" style="left:45%;width:36%;background:#3f6f63"></div></div></div>
+    <div class="bar"><span>Giao ảnh (hạn 31/01)</span><div class="track"><div class="fill" style="left:72%;width:16%;background:#2c3b57"></div></div></div>
+    <div class="bar"><span>Hội chợ Xuân</span><div class="track"><div class="fill" style="left:88%;width:12%;background:#8f2f24"></div></div></div>
+  </div>
+
+  <table style="margin-top:36px">
+    <tr><th>Phương án</th><th>Chi phí</th><th>Đơn giá/bé</th><th>Đánh đổi</th></tr>
+    <tr><td><b>A · In-house toàn phần</b></td><td>~435 triệu</td><td>~870k</td><td>Kiểm soát cao nhất, sở hữu toàn bộ set + trang phục</td></tr>
+    <tr><td><b>B · Hybrid (khuyến nghị)</b></td><td>~310 triệu</td><td>~620k</td><td>Chậm hơn 2 ngày, tiết kiệm 125 triệu, vẫn sở hữu asset</td></tr>
+    <tr><td><b>C · Outsource</b></td><td>225–275 triệu</td><td>450–550k</td><td>Rẻ nhất nhưng mất asset, rủi ro lịch mùa Tết, màu lệch giữa 4 cơ sở</td></tr>
+  </table>
+  <p class="note">Chi phí là ước tính để lập ngân sách (giả định 500 bé, 125 bé/cơ sở), chưa phải báo giá nhà cung cấp. ROI: với 310 triệu, chiến dịch hoà vốn khi giữ chân được 3 bé (giả định học phí ~100 triệu/bé/năm).</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">05 · Tham khảo thật</div>
+  <h2>Bộ ảnh &amp; clip thật để đối chiếu</h2>
+  <p class="lead">Các link dưới đây là sản phẩm thật của studio và trường học — dùng để so chất lượng, không phải để copy concept.</p>
+  <div class="refs">
+    <a href="https://moomi.vn/album/hoa-than-thanh-tieu-phu-ong-concept-chup-anh-tet-ao-dai-do-don-tim-cac-me-bim-sua/" target="_blank" rel="noopener">Moomi Studio — “Tiểu Phú Ông”, album Tết áo dài đỏ cho bé<span>Bộ ảnh thật tại TP.HCM. Xem cách một concept đơn giản được đẩy thành nhân vật.</span></a>
+    <a href="https://www.facebook.com/Amberbabystudio38/videos/" target="_blank" rel="noopener">Amber Baby Studio — clip Tết cho bé (gói mini 499k)<span>Clip thật, cho thấy mặt bằng chất lượng của gói giá rẻ mà phụ huynh đang mua.</span></a>
+    <a href="https://teddystudio.vn/blog/concept-chup-anh-tet-cho-be-va-gia-dinh-tai-ha-long.html" target="_blank" rel="noopener">Teddy Studio — concept Tết cho bé &amp; gia đình<span>Tham chiếu bố cục và cách mix gia đình vào bộ ảnh của bé.</span></a>
+    <a href="https://lavenderstudio.vn/bao-gia-chup-hinh-tet/" target="_blank" rel="noopener">Lavender Studio — bảng giá chụp hình Tết<span>Mốc giá thị trường TP.HCM để neo giá trị món quà nhà trường trao.</span></a>
+    <a href="https://www.cq.chinanews.com.cn/fgs/2026/0101/16-12210.html" target="_blank" rel="noopener">Trung Quốc — hoạt động Tết cấp trường mầm non (2026)<span>Tham chiếu cách trường học tổ chức Tết thành trải nghiệm, không chỉ trang trí.</span></a>
+    <a href="http://jyt.ah.gov.cn/xwzx/jcjy/40778560.html" target="_blank" rel="noopener">Trung Quốc — “tìm vị Tết, chạm di sản” ở trường mầm non<span>Đúng hướng di sản phi vật thể đang thắng ở thị trường TQ.</span></a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>VBBS · Tết Đinh Mùi 2027 — Concept deck v1</b><br>
+  Toàn bộ ảnh trong trang là render bằng AI để duyệt hướng nhìn (set, ánh sáng, bảng màu), không phải ảnh chụp học sinh thật và không dùng để quảng cáo.<br>
+  Chi phí là ước tính lập ngân sách. Số bé theo khối là giả định 500 bé / 4 cơ sở — thay bằng số thật trước khi chốt lịch.<br>
+  Lập ngày 21/11/2026 · Còn 77 ngày tới Tết.
+</div></footer>
+
+</body>
+</html>
